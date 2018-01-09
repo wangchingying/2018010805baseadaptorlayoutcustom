@@ -72,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
         m8.put("img", R.drawable.kaohsung);
         mylist.add(m8);
         lv1 = (ListView) findViewById(R.id.listView);
-        MyAdapter adapter = new MyAdapter(MainActivity.this,mylist);
+        //context, data(mylist), boolean陣列要去給Myadapter建構式, 如此boolean才能傳回來,下面click1按了才有資料
+        MyAdapter adapter = new MyAdapter(MainActivity.this,mylist,chks);
         lv1.setAdapter(adapter);
     }
     public void click1(View v)
